@@ -57,6 +57,7 @@ function App() {
     // change url
     ref.current.focus();
     console.log(location.pathname);
+    console.log(URLPrefix);
     navigate(pages[page]?.path || (URLPrefix + "/"));
     // eslint-disable-next-line
   }, [page]);
