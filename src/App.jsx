@@ -11,35 +11,37 @@ import Web02 from "./pages/Web02";
 import Web03 from "./pages/Web03";
 import Emotional from "./pages/Emotional";
 
+const URLPrefix = process.env.GITHUB_PAGES ? "/kutc-publec-2024" : "";
+
 const pages = [
   {
-    path: "/",
+    path: URLPrefix + "/",
     component: <Title />,
   },
   {
-    path: "/about",
+    path: URLPrefix + "/about",
     component: <About />,
   },
   {
-    path: "/intro",
+    path: URLPrefix + "/intro",
     component: <Intro />,
   },
   {
-    path: "/web01",
+    path: URLPrefix + "/web01",
     component: <Web01 />,
   },
   {
-    path: "/web02",
+    path: URLPrefix + "/web02",
     component: <Web02 />,
   },
   {
-    path: "/web03",
+    path: URLPrefix + "/web03",
     component: <Web03 />,
   },
   {
-    path: "/emotional",
+    path: URLPrefix + "/emotional",
     component: <Emotional />,
-  }
+  },
 ];
 
 function App() {
