@@ -14,7 +14,7 @@ extend({ Water })
 export default function Ocean({ position = [0, 0, 0], args=[100, 100] }) {
   const ref = useRef()
   const gl = useThree((state) => state.gl)
-  const waterNormals = useLoader(THREE.TextureLoader, '/img/waternormals.jpeg')
+  const waterNormals = useLoader(THREE.TextureLoader, './img/waternormals.jpeg')
   waterNormals.wrapS = waterNormals.wrapT = THREE.RepeatWrapping
   const geom = useMemo(() => new THREE.PlaneGeometry(...args), [])
   const config = useMemo(

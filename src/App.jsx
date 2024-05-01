@@ -56,6 +56,7 @@ function App() {
   useEffect(() => {
     // change url
     ref.current.focus();
+    console.log(location.pathname);
     navigate(pages[page]?.path || (URLPrefix + "/"));
     // eslint-disable-next-line
   }, [page]);
