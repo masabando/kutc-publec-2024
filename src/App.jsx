@@ -12,35 +12,35 @@ import Web03 from "./pages/Web03";
 import Emotional from "./pages/Emotional";
 
 //const URLPrefix = import.meta.env.DEV ? "" : "/kutc-publec-2024";
-const URLPrefix = process.env.VITE_BUILD ? "/kutc-publec-2024" : "";
+const baseURL = import.meta.env.BASE_URL;
 
 const pages = [
   {
-    path: URLPrefix + "/",
+    path: baseURL + "",
     component: <Title />,
   },
   {
-    path: URLPrefix + "/about",
+    path: baseURL + "about",
     component: <About />,
   },
   {
-    path: URLPrefix + "/intro",
+    path: baseURL + "intro",
     component: <Intro />,
   },
   {
-    path: URLPrefix + "/web01",
+    path: baseURL + "web01",
     component: <Web01 />,
   },
   {
-    path: URLPrefix + "/web02",
+    path: baseURL + "web02",
     component: <Web02 />,
   },
   {
-    path: URLPrefix + "/web03",
+    path: baseURL + "web03",
     component: <Web03 />,
   },
   {
-    path: URLPrefix + "/emotional",
+    path: baseURL + "emotional",
     component: <Emotional />,
   },
 ];
@@ -56,12 +56,7 @@ function App() {
   useEffect(() => {
     // change url
     ref.current.focus();
-    console.log(location.pathname);
-    console.log(process.env.VITE_BUILD);
-    console.log(URLPrefix);
-    console.log(import.meta.env.VITE_BUILD);
-    console.log(import.meta.env.BASE_URL)
-    navigate(pages[page]?.path || (URLPrefix + "/"));
+    navigate(pages[page]?.path || baseURL);
     // eslint-disable-next-line
   }, [page]);
   return (
@@ -108,7 +103,7 @@ function App() {
         {pages.map((page, i) => (
           <Route key={`page-${i}`} path={page.path} element={page.component} />
         ))}
-        {/* <Route path="*" element={<Title />} /> */}
+      <Route path="*" element={<Title />} />
       </Routes>
       <Button
         variant="outline-primary d-block d-md-none"
