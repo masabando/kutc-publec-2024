@@ -52,7 +52,6 @@ export default function Web02() {
       <Float floatIntensity={10} rotationIntensity={4}>
         <Html
           style={{ userSelect: "none", pointerEvents: "none" }}
-          occlude="blending"
           transform
         >
           <iframe

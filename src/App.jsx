@@ -103,20 +103,36 @@ function App() {
         {pages.map((page, i) => (
           <Route key={`page-${i}`} path={page.path} element={page.component} />
         ))}
-      <Route path="*" element={<Title />} />
+        <Route path="*" element={<Title />} />
       </Routes>
       <Button
         variant="outline-primary d-block d-md-none"
         className="rounded-0 py-2"
-        style={{ zIndex: 999, position: "fixed", bottom: "0", left: "0", width: "5rem"}}
+        style={{
+          zIndex: 999,
+          position: "fixed",
+          bottom: "0",
+          left: "0",
+          width: "5rem",
+        }}
         onClick={() => setPage(-1)}
-      >&lt;</Button>
+      >
+        &lt;
+      </Button>
       <Button
         variant="outline-primary"
         className="rounded-0 py-2 d-block d-md-none"
-        style={{ zIndex: 999, position: "fixed", bottom: "0", right: "0", width: "5rem" }}
+        style={{
+          zIndex: 999,
+          position: "fixed",
+          bottom: "0",
+          right: "0",
+          width: "5rem",
+        }}
         onClick={() => setPage(1)}
-      >&gt;</Button>
+      >
+        &gt;
+      </Button>
     </div>
   );
 }

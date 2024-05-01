@@ -45,9 +45,12 @@ export default function Title() {
             総合システム工学科 制御情報コース 准教授
           </div>
           <div className="mt-5">
-            Web制作<br />
-            ソフトウェア開発<br />
-            アプリ開発<br />
+            Web制作
+            <br />
+            ソフトウェア開発
+            <br />
+            アプリ開発
+            <br />
             VR開発
           </div>
         </Container>
@@ -55,11 +58,10 @@ export default function Title() {
       <Float floatIntensity={10} rotationIntensity={4}>
         <Html
           style={{ userSelect: "none", pointerEvents: "none" }}
-          occlude="blending"
           transform
         >
           <iframe
-            title="embed"
+            title="embed_alice"
             src="https://alice.helixcode.net/~bando/"
             width={500}
             height={700}
@@ -67,7 +69,6 @@ export default function Title() {
         </Html>
         <Html
           style={{ userSelect: "none", pointerEvents: "none" }}
-          occlude="blending"
           transform
           rotation={[0, Math.PI, 0]}
           position={[0, 0, -0.05]}
