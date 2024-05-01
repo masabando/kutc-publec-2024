@@ -59,6 +59,8 @@ function App() {
     console.log(location.pathname);
     console.log(process.env.VITE_BUILD);
     console.log(URLPrefix);
+    console.log(import.meta.env.VITE_BUILD);
+    console.log(import.meta.env.BASE_URL)
     navigate(pages[page]?.path || (URLPrefix + "/"));
     // eslint-disable-next-line
   }, [page]);
