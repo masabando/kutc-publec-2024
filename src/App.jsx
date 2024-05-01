@@ -100,7 +100,7 @@ function App() {
         {pages.map((page, i) => (
           <Route key={`page-${i}`} path={page.path} element={page.component} />
         ))}
-        <Route path="*" element={<Title />} />
+        {/* <Route path="*" element={<Title />} /> */}
       </Routes>
       <Button
         variant="outline-primary d-block d-md-none"
