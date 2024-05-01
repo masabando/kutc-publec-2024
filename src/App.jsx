@@ -11,7 +11,8 @@ import Web02 from "./pages/Web02";
 import Web03 from "./pages/Web03";
 import Emotional from "./pages/Emotional";
 
-const URLPrefix = process.env.GITHUB_PAGES ? "/kutc-publec-2024" : "";
+//const URLPrefix = import.meta.env.DEV ? "" : "/kutc-publec-2024";
+const URLPrefix = "";
 
 const pages = [
   {
@@ -55,7 +56,7 @@ function App() {
   useEffect(() => {
     // change url
     ref.current.focus();
-    navigate(pages[page]?.path || "/");
+    navigate(pages[page]?.path || (URLPrefix + "/"));
     // eslint-disable-next-line
   }, [page]);
   return (
