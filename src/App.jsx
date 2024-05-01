@@ -12,7 +12,7 @@ import Web03 from "./pages/Web03";
 import Emotional from "./pages/Emotional";
 
 //const URLPrefix = import.meta.env.DEV ? "" : "/kutc-publec-2024";
-const URLPrefix = "";
+const URLPrefix = process.env.VITE_BUILD ? "/kutc-publec-2024" : "";
 
 const pages = [
   {
