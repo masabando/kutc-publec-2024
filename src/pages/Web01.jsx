@@ -42,7 +42,7 @@ export default function Web01() {
             1990年代初頭に静的なテキストページが誕生
             <ul className="text-start mt-5">
               <li>シンプルなテキスト</li>
-              <li>リンク</li>
+              <li style={{fontSize: "200%"}}>リンク (相互作用)</li>
             </ul>
           </div>
         </Container>

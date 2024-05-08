@@ -29,6 +29,7 @@ export default function Title() {
           fluid
           style={{
             textShadow: "0 0 10px #fff",
+            zIndex: 1000,
           }}
         >
           <div
@@ -43,8 +44,13 @@ export default function Title() {
             近畿大学工業高等専門学校
             <br />
             総合システム工学科 制御情報コース 准教授
+            <br />
+            <br />
+            もうすぐ40歳
           </div>
           <div className="mt-5">
+            量子コンピュータ
+            <br />
             Web制作
             <br />
             ソフトウェア開発
@@ -56,10 +62,7 @@ export default function Title() {
         </Container>
       </Html>
       <Float floatIntensity={10} rotationIntensity={4}>
-        <Html
-          style={{ userSelect: "none", pointerEvents: "none" }}
-          transform
-        >
+        <Html className="mw-100" style={{ userSelect: "none", pointerEvents: "none" }} transform>
           <iframe
             title="embed_alice"
             src="https://alice.helixcode.net/~bando/"
@@ -68,10 +71,11 @@ export default function Title() {
           />
         </Html>
         <Html
+          className="mw-100"
           style={{ userSelect: "none", pointerEvents: "none" }}
           transform
           rotation={[0, Math.PI, 0]}
-          position={[0, 0, -0.05]}
+          position={[0, 0, -0.1]}
         >
           <iframe
             title="embed"

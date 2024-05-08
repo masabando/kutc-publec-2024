@@ -5,7 +5,12 @@ import ProgressBar from "react-bootstrap/ProgressBar";
 import Button from "react-bootstrap/Button";
 import Title from "./pages/Title";
 import About from "./pages/About";
-import Intro from "./pages/Intro";
+import Neko from "./pages/Neko";
+import Intro01 from "./pages/Intro01";
+import Intro02 from "./pages/Intro02";
+import Intro03 from "./pages/Intro03";
+import Intro04 from "./pages/Intro04";
+import Intro05 from "./pages/Intro05";
 import Web01 from "./pages/Web01";
 import Web02 from "./pages/Web02";
 import Web03 from "./pages/Web03";
@@ -20,12 +25,32 @@ const pages = [
     component: <Title />,
   },
   {
+    path: baseURL + "intro01",
+    component: <Intro01 />,
+  },
+  {
+    path: baseURL + "intro02",
+    component: <Intro02 />,
+  },
+  {
+    path: baseURL + "intro03",
+    component: <Intro03 />,
+  },
+  {
+    path: baseURL + "intro04",
+    component: <Intro04 />,
+  },
+  {
+    path: baseURL + "intro05",
+    component: <Intro05 />,
+  },
+  {
     path: baseURL + "about",
     component: <About />,
   },
   {
-    path: baseURL + "intro",
-    component: <Intro />,
+    path: baseURL + "neko",
+    component: <Neko />,
   },
   {
     path: baseURL + "web01",
