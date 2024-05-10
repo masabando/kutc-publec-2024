@@ -36,7 +36,7 @@ export default function Web01() {
               fontSize: "max(3vw, 24px)",
             }}
           >
-            Webのはじまり
+            Webページのはじまり
           </div>
           <div className="mt-3 d-inline-block">
             1990年代初頭に静的なテキストページが誕生
