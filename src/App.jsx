@@ -1,8 +1,7 @@
 import "./App.scss";
-import { useEffect, useReducer, useRef } from "react";
+import { useEffect, useReducer, useRef, useState } from "react";
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import ProgressBar from "react-bootstrap/ProgressBar";
-import Button from "react-bootstrap/Button";
 import Title from "./pages/Title";
 import About from "./pages/About";
 import Neko from "./pages/Neko";
@@ -15,6 +14,7 @@ import Web01 from "./pages/Web01";
 import Web02 from "./pages/Web02";
 import Web03 from "./pages/Web03";
 import Emotional from "./pages/Emotional";
+import MyNav from "./components/MyNav";
 
 //const URLPrefix = import.meta.env.DEV ? "" : "/kutc-publec-2024";
 const baseURL = import.meta.env.BASE_URL;
@@ -78,6 +78,7 @@ function App() {
     (state, action) => (state + action + pages.length) % pages.length,
     pages.findIndex((page) => page.path === location.pathname) || 0
   );
+  const [menu, setMenu] = useState(false);
   useEffect(() => {
     // change url
     ref.current.focus();
@@ -99,6 +100,9 @@ function App() {
           case " ":
             setPage(1);
             break;
+          case "m":
+            setMenu(!menu);
+            break;
           default:
             break;
         }
@@ -111,53 +115,36 @@ function App() {
       //   }
       //  }}
     >
-      <ProgressBar
-        variant="secondary"
-        className="rounded-0"
-        now={(page * 100) / (pages.length - 1)}
+      <div
         style={{
-          height: "0.5rem",
           position: "fixed",
           top: 0,
           left: 0,
           right: 0,
           zIndex: 999,
         }}
-      />
+      >
+        <ProgressBar
+          variant="secondary"
+          className="rounded-0"
+          style={{
+            height: "0.5rem",
+          }}
+          now={(page * 100) / (pages.length - 1)}
+        />
+        <MyNav
+          page={page}
+          hidden={menu}
+          setPage={setPage}
+          totalPageNum={pages.length}
+        />
+      </div>
       <Routes>
         {pages.map((page, i) => (
           <Route key={`page-${i}`} path={page.path} element={page.component} />
         ))}
         <Route path="*" element={<Title />} />
       </Routes>
-      <Button
-        variant="outline-primary d-block d-md-none"
-        className="rounded-0 py-2"
-        style={{
-          zIndex: 999,
-          position: "fixed",
-          bottom: "0",
-          left: "0",
-          width: "5rem",
-        }}
-        onClick={() => setPage(-1)}
-      >
-        &lt;
-      </Button>
-      <Button
-        variant="outline-primary"
-        className="rounded-0 py-2 d-block d-md-none"
-        style={{
-          zIndex: 999,
-          position: "fixed",
-          bottom: "0",
-          right: "0",
-          width: "5rem",
-        }}
-        onClick={() => setPage(1)}
-      >
-        &gt;
-      </Button>
     </div>
   );
 }
