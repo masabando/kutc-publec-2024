@@ -13,6 +13,12 @@ import Intro05 from "./pages/Intro05";
 import Web01 from "./pages/Web01";
 import Web02 from "./pages/Web02";
 import Web03 from "./pages/Web03";
+import Web04 from "./pages/Web04";
+import Web04_0 from "./pages/Web04_0";
+// import Web04_1 from "./pages/Web04_1";
+// import Web04_2 from "./pages/Web04_2";
+import Web05 from "./pages/Web05";
+import Web06 from "./pages/Web06";
 import Emotional from "./pages/Emotional";
 import MyNav from "./components/MyNav";
 
@@ -65,8 +71,32 @@ const pages = [
     component: <Web03 />,
   },
   {
+    path: baseURL + "web04",
+    component: <Web04 />,
+  },
+  {
+    path: baseURL + "web04_0",
+    component: <Web04_0 />,
+  },
+  // {
+  //   path: baseURL + "web04_1",
+  //   component: <Web04_1 />,
+  // },
+  // {
+  //   path: baseURL + "web04_2",
+  //   component: <Web04_2 />,
+  // },
+  {
+    path: baseURL + "web05",
+    component: <Web05 />,
+  },
+  {
     path: baseURL + "emotional",
     component: <Emotional />,
+  },
+  {
+    path: baseURL + "web06",
+    component: <Web06 />,
   },
 ];
 

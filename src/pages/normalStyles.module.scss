@@ -1,0 +1,18 @@
+.normalStyles {
+  background: #fff;
+  height: 100svh;
+  padding-top: 70px;
+  font-size: min(4vw, 50px);
+
+  h2 {
+    margin-bottom: 1em;
+    color: darkblue;
+  }
+
+  h3 {
+    font-size: inherit;
+    padding-left: 0.3em;
+    border-left: 0.3em solid hotpink;
+    margin-top: 1.6em;
+  }
+}
