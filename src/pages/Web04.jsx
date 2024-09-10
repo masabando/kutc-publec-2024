@@ -15,9 +15,6 @@ export default function Web04() {
         <li>スマホだとメニューボタンに</li>
       </ul>
 
-      <h3>近大高専のWebサイトは…？</h3>
-      もちろんレスポンシブ対応しています！！
-
     </Container>
   );
 }

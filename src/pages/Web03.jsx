@@ -6,7 +6,8 @@ export default function Web03() {
     <Container fluid className={styles.normalStyles}>
       <h2>スマホの誕生</h2>
       カメラもマイクもある<br />
-      持ち運べる小さなコンピュータ
+      持ち運べる小さなコンピュータ<br />
+      SNSとも相性バッチリ
       
       <h3>どこでもWebページを閲覧</h3>
       <ul style={{ marginLeft: "1em" }}>
@@ -14,8 +15,6 @@ export default function Web03() {
         <li>公園</li>
         <li>カフェ</li>
       </ul>
-
-      <h3>SNSとも相性バッチリ</h3>
 
     </Container>
   );
