@@ -1,6 +1,6 @@
 import { Canvas } from "@react-three/fiber";
 import { Environment, Html, Float, OrbitControls } from "@react-three/drei";
-import Container from "react-bootstrap/Container";
+// import Container from "react-bootstrap/Container";
 
 export default function Title() {
   return (
@@ -14,7 +14,7 @@ export default function Title() {
       style={{ zIndex: 100 }}
     >
       <Environment preset="dawn" background backgroundBlurriness={0.7} />
-      <Html
+      {/* <Html
         center
         prepend
         style={{
@@ -60,7 +60,7 @@ export default function Title() {
             VR開発
           </div>
         </Container>
-      </Html>
+      </Html> */}
       <Float floatIntensity={10} rotationIntensity={4}>
         <Html className="mw-100" style={{ userSelect: "none", pointerEvents: "none" }} transform>
           <iframe

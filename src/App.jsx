@@ -21,6 +21,7 @@ import Web05 from "./pages/Web05";
 import Web06 from "./pages/Web06";
 import Emotional from "./pages/Emotional";
 import MyNav from "./components/MyNav";
+import PoseFace from "./pages/PoseFace";
 
 //const URLPrefix = import.meta.env.DEV ? "" : "/kutc-publec-2024";
 const baseURL = import.meta.env.BASE_URL;
@@ -89,6 +90,10 @@ const pages = [
   {
     path: baseURL + "web05",
     component: <Web05 />,
+  },
+  {
+    path: baseURL + "pose",
+    component: <PoseFace />,
   },
   {
     path: baseURL + "emotional",
