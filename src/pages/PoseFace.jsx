@@ -147,7 +147,7 @@ export default function PoseFace() {
   }, [detectFlag]);
 
   return (
-    <Container  className="mt-5">
+    <Container className="mt-5">
       <div className="py-2 d-flex align-items-center gap-2">
         <Button
           className="ms-3"
