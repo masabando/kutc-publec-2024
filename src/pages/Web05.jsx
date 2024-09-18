@@ -2,6 +2,7 @@ import { Canvas } from "@react-three/fiber";
 import { Html, Float, Environment, Plane, useTexture } from "@react-three/drei";
 import Container from "react-bootstrap/Container";
 import spreadSheet from "../assets/spreadsheet.png";
+import Button from "react-bootstrap/Button";
 
 function PC({ scale }) {
   const texture = useTexture(spreadSheet);
@@ -50,16 +51,25 @@ export default function Web05() {
             Web「ページ」を超えて
           </div>
           <div className="mt-3 d-inline-block">
-            
             <ul className="text-start mt-5">
               <li>Webアプリ</li>
               <li>ゲーム</li>
               <li>仮想現実 (VR、AR)</li>
+              <li>
+                <Button href="https://alice.helixcode.net/~bando/pub/KUTC3D/" target="_blank">
+                  VR近大高専
+                </Button>
+              </li>
             </ul>
           </div>
         </Container>
       </Html>
-      <Float floatIntensity={10} speed={3} rotationIntensity={0} position={[3, 0, 0]}>
+      <Float
+        floatIntensity={10}
+        speed={3}
+        rotationIntensity={0}
+        position={[3, 0, 0]}
+      >
         <PC scale={1.7} />
       </Float>
     </Canvas>

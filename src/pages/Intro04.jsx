@@ -28,7 +28,7 @@ export default function Intro04() {
           }}
           transform
         >
-          <div style={{lineHeight: "1.1"}}>もう少しで34年前</div>
+          <div style={{lineHeight: "1.1"}}>もう少しで34年前 (33歳)</div>
           <img className="mw-100" src={firstWebpage} alt="firstWebpage" />
         </Html>
       </Float>

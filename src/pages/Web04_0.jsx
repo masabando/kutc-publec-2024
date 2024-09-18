@@ -25,7 +25,7 @@ function WebPage() {
       //transform
     >
       <iframe
-        src="https://kutc.sakura.ne.jp"
+        src="https://www.ktc.ac.jp"
         style={{
           width: `100%`,
           height: "80vh",

@@ -52,7 +52,7 @@ export default function Title() {
           >
             近畿大学工業高等専門学校
             <br />
-            総合システム工学科 制御情報コース
+            総合システム工学科 制御情報コース 准教授
           </div>
           <div
             className="mt-5"

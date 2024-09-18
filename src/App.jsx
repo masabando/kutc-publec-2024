@@ -11,6 +11,10 @@ import Intro03 from "./pages/Intro03";
 import Intro04 from "./pages/Intro04";
 import Intro05 from "./pages/Intro05";
 import Web01 from "./pages/Web01";
+import Web01_1 from "./pages/Web01_1";
+import Web01_2 from "./pages/Web01_2";
+import Web01_3 from "./pages/Web01_3";
+import Web01_4 from "./pages/Web01_4";
 import Web02 from "./pages/Web02";
 import Web03 from "./pages/Web03";
 import Web04 from "./pages/Web04";
@@ -22,6 +26,7 @@ import Web06 from "./pages/Web06";
 import Emotional from "./pages/Emotional";
 import MyNav from "./components/MyNav";
 import PoseFace from "./pages/PoseFace";
+import Future from "./pages/Future";
 
 //const URLPrefix = import.meta.env.DEV ? "" : "/kutc-publec-2024";
 const baseURL = import.meta.env.BASE_URL;
@@ -64,6 +69,22 @@ const pages = [
     component: <Web01 />,
   },
   {
+    path: baseURL + "web01_1",
+    component: <Web01_1 />,
+  },
+  {
+    path: baseURL + "web01_2",
+    component: <Web01_2 />,
+  },
+  {
+    path: baseURL + "web01_3",
+    component: <Web01_3 />,
+  },
+  {
+    path: baseURL + "web01_4",
+    component: <Web01_4 />,
+  },
+  {
     path: baseURL + "web02",
     component: <Web02 />,
   },
@@ -92,16 +113,20 @@ const pages = [
     component: <Web05 />,
   },
   {
-    path: baseURL + "pose",
-    component: <PoseFace />,
-  },
-  {
     path: baseURL + "emotional",
     component: <Emotional />,
   },
   {
+    path: baseURL + "pose",
+    component: <PoseFace />,
+  },
+  {
     path: baseURL + "web06",
     component: <Web06 />,
+  },
+  {
+    path: baseURL + "future",
+    component: <Future />,
   },
 ];
 

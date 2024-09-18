@@ -4,7 +4,7 @@ import styles from "./normalStyles.module.scss";
 export default function Web01() {
   return (
     <Container fluid className={styles.normalStyles}>
-      <h2>Webページのはじまり</h2>
+      <h2>Webページの歴史</h2>
       <div className="mt-3">
         1990年代初頭に静的なテキストページが誕生
         <ul className="mt-5 ms-5">
