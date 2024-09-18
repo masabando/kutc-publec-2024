@@ -59,9 +59,9 @@ function FutureItems({ idx, setIdx }) {
 
 const envs = [
   <Environment preset="lobby" background key="env0" backgroundBlurriness={1} />,
-  <Environment files="../bg/dikhololo_night_2k.hdr" background key="env1" />,
+  <Environment files="./bg/dikhololo_night_2k.hdr" background key="env1" />,
   <Environment preset="lobby" background key="env2" />,
-  <Environment files="../bg/resting_place_2k.hdr" background key="env3" />,
+  <Environment files="./bg/resting_place_2k.hdr" background key="env3" />,
 ];
 
 export default function Future() {
