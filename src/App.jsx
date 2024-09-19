@@ -31,7 +31,8 @@ import Future from "./pages/Future";
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@ant-design/icons";
 
 //const URLPrefix = import.meta.env.DEV ? "" : "/kutc-publec-2024";
-const baseURL = import.meta.env.BASE_URL;
+//const baseURL = import.meta.env.BASE_URL;
+const baseURL = "";
 
 const pages = [
   {
@@ -141,7 +142,7 @@ function App() {
       if (action === 0) return 0;
       return (state + action + pages.length) % pages.length
     },
-    pages.findIndex((page) => page.path === location.pathname) || 0
+    pages.findIndex((p) => p.path === location.pathname.split("/").at(-1)) || 0
   );
   const [menu, setMenu] = useState(false);
   useEffect(() => {
