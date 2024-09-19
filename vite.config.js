@@ -5,7 +5,7 @@ import basicSsl from '@vitejs/plugin-basic-ssl'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: process.env.VITE_BUILD ? "/kutc-publec-2024/" : "/",
+  base: process.env.VITE_BUILD ? "/kutc-publec-2024" : "",
   server: {
     host: true,
   },

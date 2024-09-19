@@ -2,6 +2,7 @@ import "./App.scss";
 import { useEffect, useReducer, useRef, useState } from "react";
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import ProgressBar from "react-bootstrap/ProgressBar";
+import { FloatButton } from 'antd';
 import Title from "./pages/Title";
 import About from "./pages/About";
 import Neko from "./pages/Neko";
@@ -27,6 +28,7 @@ import Emotional from "./pages/Emotional";
 import MyNav from "./components/MyNav";
 import PoseFace from "./pages/PoseFace";
 import Future from "./pages/Future";
+import { ArrowLeftOutlined, ArrowRightOutlined } from "@ant-design/icons";
 
 //const URLPrefix = import.meta.env.DEV ? "" : "/kutc-publec-2024";
 const baseURL = import.meta.env.BASE_URL;
@@ -135,7 +137,10 @@ function App() {
   const navigate = useNavigate();
   const location = useLocation();
   const [page, setPage] = useReducer(
-    (state, action) => (state + action + pages.length) % pages.length,
+    (state, action) => {
+      if (action === 0) return 0;
+      return (state + action + pages.length) % pages.length
+    },
     pages.findIndex((page) => page.path === location.pathname) || 0
   );
   const [menu, setMenu] = useState(false);
@@ -205,6 +210,10 @@ function App() {
         ))}
         <Route path="*" element={<Title />} />
       </Routes>
+      <FloatButton.Group>
+        <FloatButton icon={<ArrowLeftOutlined />} onClick={() => { setPage(-1) }} />
+        <FloatButton icon={<ArrowRightOutlined />} onClick={() => { setPage(1) }} />
+      </FloatButton.Group>
     </div>
   );
 }
