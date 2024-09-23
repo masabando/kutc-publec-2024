@@ -25,6 +25,7 @@ import Web04_0 from "./pages/Web04_0";
 import Web05 from "./pages/Web05";
 import Web06 from "./pages/Web06";
 import Emotional from "./pages/Emotional";
+import Real from "./pages/Real";
 import MyNav from "./components/MyNav";
 import PoseFace from "./pages/PoseFace";
 import Future from "./pages/Future";
@@ -118,6 +119,10 @@ const pages = [
   {
     path: baseURL + "emotional",
     component: <Emotional />,
+  },
+  {
+    path: baseURL + "real",
+    component: <Real />,
   },
   {
     path: baseURL + "pose",
