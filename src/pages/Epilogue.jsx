@@ -152,7 +152,7 @@ function Envs({ idx }) {
           style={{
             width: "100vw",
             height: "100dvh",
-            background: "url(/bg/ktc-02-2.jpg)",
+            background: "url(./bg/ktc-02-2.jpg)",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
