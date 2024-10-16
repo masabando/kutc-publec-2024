@@ -23,12 +23,14 @@ import Web04_0 from "./pages/Web04_0";
 // import Web04_1 from "./pages/Web04_1";
 // import Web04_2 from "./pages/Web04_2";
 import Web05 from "./pages/Web05";
-import Web06 from "./pages/Web06";
+import Web06_1 from "./pages/Web06_1";
+import Web06_2 from "./pages/Web06_2";
 import Emotional from "./pages/Emotional";
 import Real from "./pages/Real";
 import MyNav from "./components/MyNav";
 import PoseFace from "./pages/PoseFace";
 import Future from "./pages/Future";
+import Epilogue from "./pages/Epilogue";
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@ant-design/icons";
 
 //const URLPrefix = import.meta.env.DEV ? "" : "/kutc-publec-2024";
@@ -129,13 +131,21 @@ const pages = [
     component: <PoseFace />,
   },
   {
-    path: baseURL + "web06",
-    component: <Web06 />,
+    path: baseURL + "web06_1",
+    component: <Web06_1 />,
+  },
+  {
+    path: baseURL + "web06_2",
+    component: <Web06_2 />,
   },
   {
     path: baseURL + "future",
     component: <Future />,
   },
+  {
+    path: baseURL + "epilogue",
+    component: <Epilogue />,
+  }
 ];
 
 function App() {
