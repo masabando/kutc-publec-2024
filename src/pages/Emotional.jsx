@@ -1,7 +1,8 @@
-import { useRef } from "react";
+import { useRef, Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Sky, OrbitControls, Box, Float } from "@react-three/drei";
 import Ocean from "../components/Ocean";
+import Loading from "../components/Loading";
 
 function RotateBox() {
   const gRef = useRef();
@@ -29,7 +30,7 @@ function RotateBox() {
     thickness: 3,
     //opacity: 0.5,
     //transparent: true,
-  }
+  };
   return (
     <group ref={gRef}>
       <Box
@@ -61,17 +62,8 @@ function RotateBox() {
       >
         <meshPhysicalMaterial {...mp} color="blue" />
       </Box>
-      <Box
-        ref={bRef}
-        position={[
-          0,
-          6,
-          0
-        ]}
-        {...p}
-      >
-        <meshPhysicalMaterial
-          color="gray" />
+      <Box ref={bRef} position={[0, 6, 0]} {...p}>
+        <meshPhysicalMaterial color="gray" />
       </Box>
     </group>
   );
@@ -88,40 +80,42 @@ export default function Emotional() {
       }}
       style={{ zIndex: 100 }}
     >
-      <OrbitControls />
-      <Sky scale={100} sunPosition={[100, 30, -100]} turbidity={0.1} />
-      <ambientLight intensity={1} />
-      <directionalLight
-        position={[100, 100, 100]}
-        intensity={0.5}
-        castShadow
-        shadow-mapSize-width={1024}
-        shadow-mapSize-height={1024}
-        shadow-camera-far={1000}
-        shadow-camera-left={-100}
-        shadow-camera-right={100}
-        shadow-camera-top={100}
-        shadow-camera-bottom={-100}
-      />
-      <Ocean />
-      <Float
-        position={[0, 3, 0]}
-        speed={3}
-        floatIntensity={40}
-        rotationIntensity={4}
-      >
-        <Box args={[...Array(3).fill(5)]} castShadow receiveShadow>
-          <meshPhysicalMaterial
-            roughness={0.1}
-            metalness={0.1}
-            thickness={3}
-            clearcoat={1}
-            clearcoatRoughness={0.1}
-            transmission={1}
-          />
-        </Box>
-      </Float>
-      <RotateBox />
+      <Suspense fallback={<Loading />}>
+        <OrbitControls />
+        <Sky scale={100} sunPosition={[100, 30, -100]} turbidity={0.1} />
+        <ambientLight intensity={1} />
+        <directionalLight
+          position={[100, 100, 100]}
+          intensity={0.5}
+          castShadow
+          shadow-mapSize-width={1024}
+          shadow-mapSize-height={1024}
+          shadow-camera-far={1000}
+          shadow-camera-left={-100}
+          shadow-camera-right={100}
+          shadow-camera-top={100}
+          shadow-camera-bottom={-100}
+        />
+        <Ocean />
+        <Float
+          position={[0, 3, 0]}
+          speed={3}
+          floatIntensity={40}
+          rotationIntensity={4}
+        >
+          <Box args={[...Array(3).fill(5)]} castShadow receiveShadow>
+            <meshPhysicalMaterial
+              roughness={0.1}
+              metalness={0.1}
+              thickness={3}
+              clearcoat={1}
+              clearcoatRoughness={0.1}
+              transmission={1}
+            />
+          </Box>
+        </Float>
+        <RotateBox />
+      </Suspense>
     </Canvas>
   );
 }
